@@ -8,7 +8,7 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 const store = createStore(rootReducer)
-​
+
 render(
   <Provider store={store}>
     <App />

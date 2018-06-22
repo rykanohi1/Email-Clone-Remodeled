@@ -1,6 +1,6 @@
 import React from 'react';
 import FolderCount from './folder-count/folder-count';
-import LeftRightLayout from '../../components/layout/left-right-layout/left-right-layout';
+import LeftRightLayout from 'components/layout/left-right-layout/left-right-layout';
 
 export default ({label, count, hasUnread, isSelected}) => (
   <LeftRightLayout

@@ -16,5 +16,5 @@ const folderList = (state = defaultState, action) => {
         return state
     }
   }
-  ​
+  
   export default folderList

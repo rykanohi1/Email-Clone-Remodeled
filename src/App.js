@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
-import {getFolders} from './folder-list/folder-list.actions';
-import FolderList from './folder-list/folder-list';
+import {getFolders} from 'containers/folder-list/folder-list.actions';
+import FolderList from 'containers/folder-list/folder-list';
 import './App.css';
 
 export class App extends Component {
@@ -25,4 +25,5 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     getFolders: id => dispatch(getFolders(id))
 })
-  ​
+
+export default App;

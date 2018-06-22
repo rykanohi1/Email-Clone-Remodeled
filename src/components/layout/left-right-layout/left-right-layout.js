@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './left-right-layout.scss';
+import './left-right-layout.scss';
 
 /**
  * Manages the layout of content

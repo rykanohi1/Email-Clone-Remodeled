@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './folder-list.scss';
-import Folder from './folder/folder';
+import Folder from 'containers/folder-list/folder/folder';
+import './folder-list.scss';
 
 export default ({folders}) => {
     return (<div className="folder-list">
