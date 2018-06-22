@@ -1,0 +1,10 @@
+.folder {
+
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+
+    &:hover {
+        background-color: lightblue;
+        cursor: pointer;
+    }
+}

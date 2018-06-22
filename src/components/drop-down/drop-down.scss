@@ -1,0 +1,45 @@
+$red: #ed1a1a;
+$blue: #1d1aed;
+$white: #ffffff;
+$black: #000000;
+
+
+.drop-down button {
+    height: 80px;
+    width: 160px;
+    background-color: $red;
+    font-size: 20px;
+    border: none;
+}
+
+.dropdown.hide {
+    display: none
+}
+
+.dropdown.show {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.dropdown.show li {
+    padding: 10px;
+}
+
+.dropdown.show li button {
+    height: 60px;
+    width: 120px;
+    border-radius: 15px;
+    background-color: $blue;
+    font-size: 15px;
+    color: $white;
+}
+
+.dropdown.show li button:hover {
+    height: 60px;
+    width: 120px;
+    border-radius: 15px;
+    background-color: $blue;
+    font-size: 15px;
+    color: $white;
+    box-shadow: 5px 10px $black;
+}

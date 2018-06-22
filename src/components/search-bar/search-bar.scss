@@ -1,0 +1,19 @@
+
+.contact-list {
+  &.show {
+    display: block
+  }
+  &.hide {
+    display: none
+  }
+}
+
+.toggle-mask {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  .search-bar {
+    display: inline-block;
+  }
+}
+
