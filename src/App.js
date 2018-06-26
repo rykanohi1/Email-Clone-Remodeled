@@ -19,11 +19,11 @@ export class App extends Component {
 }
 
 const mapStateToProps = state => ({
-    folders: state.folders
+    folders: state.folderList.folders
 })
 
 const mapDispatchToProps = dispatch => ({
     getFolders: id => dispatch(getFolders(id))
 })
 
-export default App;
+export default connect(mapStateToProps,mapDispatchToProps)(App);
