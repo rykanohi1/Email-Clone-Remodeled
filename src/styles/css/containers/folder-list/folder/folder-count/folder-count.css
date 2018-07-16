@@ -1,0 +1,6 @@
+.folder-count {
+  color: #646566; }
+
+.folder-count.has-unread {
+  color: #0968c6;
+  font-weight: bold; }

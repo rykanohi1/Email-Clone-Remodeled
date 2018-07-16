@@ -1,0 +1,12 @@
+.contact-list.show {
+  display: block; }
+
+.contact-list.hide {
+  display: none; }
+
+.toggle-mask {
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+  .toggle-mask .search-bar {
+    display: inline-block; }

@@ -1,0 +1,6 @@
+.left-right-layout.folder {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px; }
+  .left-right-layout.folder:hover {
+    background-color: lightblue;
+    cursor: pointer; }

@@ -1,0 +1,33 @@
+.drop-down button {
+  height: 80px;
+  width: 160px;
+  background-color: #ed1a1a;
+  font-size: 20px;
+  border: none; }
+
+.dropdown.hide {
+  display: none; }
+
+.dropdown.show {
+  list-style-type: none;
+  padding-left: 0px; }
+
+.dropdown.show li {
+  padding: 10px; }
+
+.dropdown.show li button {
+  height: 60px;
+  width: 120px;
+  border-radius: 15px;
+  background-color: #1d1aed;
+  font-size: 15px;
+  color: #ffffff; }
+
+.dropdown.show li button:hover {
+  height: 60px;
+  width: 120px;
+  border-radius: 15px;
+  background-color: #1d1aed;
+  font-size: 15px;
+  color: #ffffff;
+  box-shadow: 5px 10px #000000; }

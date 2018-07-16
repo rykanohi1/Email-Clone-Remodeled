@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import ActionButton from "../action-button/action-button";
 import ContactList from "../contact-list/contact-list";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
 
-class SearchBar extends Component {
-  constructor() {
-    super();
+export default class SearchBar extends Component {
+  constructor(props) {
+    super(props);
     this.updateSearch = this.updateSearch.bind(this);
     this.toggleContacts = this.toggleContacts.bind(this);
     this.state = {
       searchTerm: "",
       isVisible: false
+      
     };
   }
 
@@ -27,7 +26,7 @@ class SearchBar extends Component {
   }
 
   filterContacts() {
-    this.props.contacts.filter(contact => {
+   return this.props.contacts.filter(contact => {
       return contact.username
         .toLowerCase()
         .includes(this.state.searchTerm.toLowerCase());
@@ -53,6 +52,7 @@ class SearchBar extends Component {
               value={this.state.searchTerm}
               onChange={this.updateSearch}
               onFocus={this.toggleContacts}
+              
             />
             <ActionButton
               title="searchButton"
@@ -61,16 +61,10 @@ class SearchBar extends Component {
               action={this.search}
             />
             {this.state.isVisible && (
-              <ContactList contacts={this.filterContacts} />
+              <ContactList contacts={this.filterContacts()} />
             )}
           </div>
         </div>
     );
   }
 }
-
-function mapStateToProps(state) {
-  return { contacts: state.contacts };
-}
-
-export default connect(mapStateToProps)(SearchBar);

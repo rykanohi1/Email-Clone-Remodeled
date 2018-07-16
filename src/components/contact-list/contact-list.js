@@ -1,6 +1,7 @@
 import React from 'react';
 import LeftRightLayout from '../layout/left-right-layout/left-right-layout';
 import ActionButton from '../action-button/action-button';
+import './contact-list.scss';
 
 export default ({className,contacts}) => {
 return (

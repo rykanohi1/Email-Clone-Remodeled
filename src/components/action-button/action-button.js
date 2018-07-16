@@ -1,14 +1,6 @@
 import React from 'react';
+import './action-button.scss';
 
-// What do I expect from my callers
-/**
- * Renders an action button
- * @param {String} imgSrc
- * @param {String} label
- * @param {String} title
- * @param {Function} action
- * @returns {XML}
- */
 export default ({imgSrc, label, title, action}) => {
   if(!(imgSrc || label)) {
     throw new Error('imgSrc and label cannot both be blank');
@@ -23,5 +15,4 @@ export default ({imgSrc, label, title, action}) => {
       {label && <span>{label}</span>}
     </button>
   );
-  // What does my caller expect from me?
 }

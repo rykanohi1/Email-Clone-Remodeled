@@ -1,0 +1,7 @@
+.left-right-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.left-right-layout.contact {
+  display: block; }

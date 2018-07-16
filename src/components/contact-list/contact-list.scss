@@ -1,9 +1,3 @@
-.contact-list {
-    display: flex;
-    &.show {
-    display: block
-    }
-    &.hide {
-    display: none
-    }
+.contact-list.standard img{
+    width: 100px
 }

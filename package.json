@@ -8,15 +8,21 @@
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
+    "storybook": "^1.0.0",
     "yarn": "^1.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "sass:watch": "sass --watch src/styles/scss:src/styles/css",
+    "sass:build": "sass --update src/styles/scss:src/styles/css",
+    "update-styles":  "node-sass -r src -o src/styles/css",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "babel-plugin-module-resolver": "^3.1.1"
+    "babel-plugin-module-resolver": "^3.1.1",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3"
   }
 }
