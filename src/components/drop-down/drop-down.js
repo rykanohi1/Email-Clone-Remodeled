@@ -10,13 +10,13 @@ export default class DropDown extends Component {
     this.state = {
       isHidden: true
     };
-
+    // items need to be objects
     this.props.items.forEach(item => {
       if (typeof item !== 'object' || !('id' in item) && !('value' in item)) {
         throw new Error('invalid object')
       }
     });
-
+    // items need to be contained within arrays
     if (!Array.isArray(this.props.items)) {
       throw new Error('must be an array')
     }
@@ -31,10 +31,11 @@ export default class DropDown extends Component {
     }));
   };
   render() {
+    debugger;
     return (
       <div className='drop-down'>
         <ActionButton imgSrc={this.props.imgSrc} action={this.toggleDisplay} label={this.props.label} title='expand-options' />
-        <ul className={`dropdown ${this.state.isHidden ? 'show' : 'hide'}`}>
+        <ul className={`dropdown ${this.state.isHidden ? 'hide' : 'show'}`}>
           {this.props.items.map(item => <li key={item.id}>
           <ActionButton title={item.value.title}
                         label={item.value.label}

@@ -31,9 +31,10 @@ export class App extends Component {
     render() {
         return (
             <div>
+                <DropDown label='Open the app launcher to access Office 365 apps' items={this.props.appLauncher}/> 
                 <FolderList folders={this.props.folders}/>
                 <ActionButton label='Redux Documentation' action={() => window.location.href='https://redux.js.org/'}/>
-                <DropDown label='drops down' items={this.props.items}/>
+                <DropDown label='drops down' items={this.props.test}/> 
                 <ContactList contacts={this.props.contacts} className='standard'/>
                 <SearchBar contacts={[{imgSrc: 'http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png', 
                 username: 'Jonathan', 
@@ -55,7 +56,8 @@ const mapStateToProps = state => ({
     folders: state.folderList.folders,
     action: state.actionButton.action,
     contacts: state.contactList.contacts,
-    items: state.dropDown.items
+    test: state.dropDown.test,
+    appLauncher: state.dropDown.appLauncher
 })
 
 const mapDispatchToProps = dispatch => ({

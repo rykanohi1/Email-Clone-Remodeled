@@ -22,7 +22,7 @@ export default class FolderList extends Component {
            selectedItem: null
         }
     }
-
+    // list visibility needs to be toggleable
     toggleSelected(event) {
         const activeIndex = event.target.id;
         event.preventDefault();

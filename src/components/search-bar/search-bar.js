@@ -42,7 +42,7 @@ export default class SearchBar extends Component {
     return (
         <div
           className={this.state.isVisible && "toggle-mask"}
-          onClick={this.toggleContacts}
+         
         >
           <div className="search-bar">
             <input
@@ -52,6 +52,7 @@ export default class SearchBar extends Component {
               value={this.state.searchTerm}
               onChange={this.updateSearch}
               onFocus={this.toggleContacts}
+              onBlur={this.toggleContacts}
               
             />
             <ActionButton
