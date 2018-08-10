@@ -31,22 +31,12 @@ export class App extends Component {
     render() {
         return (
             <div>
-                <DropDown label='Open the app launcher to access Office 365 apps' items={this.props.appLauncher}/> 
+                <DropDown className='appMenu' imgSrc='https://apkvision.com/wp-content/uploads/2017/09/13633.jpg' title='Open the app launcher to access Office 365 apps' items={this.props.menuOptions}/> 
                 <FolderList folders={this.props.folders}/>
                 <ActionButton label='Redux Documentation' action={() => window.location.href='https://redux.js.org/'}/>
                 <DropDown label='drops down' items={this.props.test}/> 
                 <ContactList contacts={this.props.contacts} className='standard'/>
-                <SearchBar contacts={[{imgSrc: 'http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png', 
-                username: 'Jonathan', 
-                address: 'Jonathan01@email.com'},
-
-               {imgSrc: 'http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png',
-                username: 'Abby',
-                address: 'Abby02@email.com'},
-
-               {imgSrc: 'http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png',
-                username: 'Mike',
-                address: 'Mike03@otheremail.com'}]}/>
+                <SearchBar contacts={this.props.contacts}/>
             </div>
         )
     }
@@ -57,7 +47,7 @@ const mapStateToProps = state => ({
     action: state.actionButton.action,
     contacts: state.contactList.contacts,
     test: state.dropDown.test,
-    appLauncher: state.dropDown.appLauncher
+    menuOptions: state.dropDown.menuOptions
 })
 
 const mapDispatchToProps = dispatch => ({

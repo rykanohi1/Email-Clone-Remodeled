@@ -31,10 +31,9 @@ export default class DropDown extends Component {
     }));
   };
   render() {
-    debugger;
     return (
-      <div className='drop-down'>
-        <ActionButton imgSrc={this.props.imgSrc} action={this.toggleDisplay} label={this.props.label} title='expand-options' />
+      <div className={`drop-down ${this.props.className || 'default'}`}>
+        <ActionButton imgSrc={this.props.imgSrc} action={this.toggleDisplay} label={this.props.label} title={this.props.title} />
         <ul className={`dropdown ${this.state.isHidden ? 'hide' : 'show'}`}>
           {this.props.items.map(item => <li key={item.id}>
           <ActionButton title={item.value.title}

@@ -1,21 +1,25 @@
+.contact-list.show {
+  display: block;
+}
 
-.contact-list {
-  &.show {
-    display: block
-  }
-  &.hide {
-    display: none
-  }
+.contact-list.hide {
+  display: none;
 }
 
 .toggle-mask {
-    
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  
-  .search-bar {
-    display: inline-block;
-  }
+  height: 2000px;
+
+  width: 100%;
+
+  position: absolute;
+
+  top: 0;
 }
 
+.search-bar {
+  position: absolute;
+
+  display: inline-block;
+
+  z-index: 10;
+}
