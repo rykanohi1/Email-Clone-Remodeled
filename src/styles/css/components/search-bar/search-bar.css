@@ -11,6 +11,11 @@
   top: 0; }
 
 .search-bar {
-  position: absolute;
   display: inline-block;
-  z-index: 10; }
+  z-index: 10;
+  margin-left: 150px; }
+  .search-bar button {
+    height: 100%; }
+
+.search-filter {
+  height: 100%; }

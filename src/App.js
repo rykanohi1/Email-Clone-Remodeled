@@ -9,12 +9,13 @@ import ActionButton from 'components/action-button/action-button';
 import ContactList from 'components/contact-list/contact-list';
 import DropDown from 'components/drop-down/drop-down';
 import SearchBar from 'components/search-bar/search-bar';
-import './App.css';
-import 'styles/css/components/drop-down/drop-down.css';
+import 'styles/css/App.css';
+import 'styles/css/components/action-button/action-button.css';
 import 'styles/css/components/contact-list/contact-list.css';
-import 'styles/css/components/search-bar/search-bar.css';
+import 'styles/css/components/drop-down/drop-down.css';
 import 'styles/css/containers/folder-list/folder/folder.css';
 import 'styles/css/containers/folder-list/folder/folder-count/folder-count.css';
+import 'styles/css/components/search-bar/search-bar.css';
 
 export class App extends Component {
     constructor(props) {
@@ -31,12 +32,17 @@ export class App extends Component {
     render() {
         return (
             <div>
-                <DropDown className='appMenu' imgSrc='https://apkvision.com/wp-content/uploads/2017/09/13633.jpg' title='Open the app launcher to access Office 365 apps' items={this.props.menuOptions}/> 
+                <div className='navigation-bar'>
+                    <DropDown className='appMenu' 
+                              imgSrc='https://apkvision.com/wp-content/uploads/2017/09/13633.jpg' 
+                            title='Open the app launcher to access Office 365 apps' 
+                            items={this.props.menuOptions}/> 
+                    <SearchBar contacts={this.props.contacts}/>
+                    <ActionButton className='home-page' label='Mail Client' action={() => window.location.href='https://redux.js.org/'}/>
+                </div>
                 <FolderList folders={this.props.folders}/>
                 <ActionButton label='Redux Documentation' action={() => window.location.href='https://redux.js.org/'}/>
-                <DropDown label='drops down' items={this.props.test}/> 
                 <ContactList contacts={this.props.contacts} className='standard'/>
-                <SearchBar contacts={this.props.contacts}/>
             </div>
         )
     }

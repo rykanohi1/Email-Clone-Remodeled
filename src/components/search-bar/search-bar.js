@@ -61,7 +61,7 @@ render() {
                       label="search"
                       imgSrc={this.props.imgSrc}
                       action={this.search}/>
-        {this.state.isVisible && (<ContactList contacts={this.filterContacts()} getContactEmails={this.search} className='standard'n/>)}
+        {this.state.isVisible && (<ContactList contacts={this.filterContacts()} getContactEmails={this.search} className='search-bar'/>)}
         </div>
     </React.Fragment>);
   }

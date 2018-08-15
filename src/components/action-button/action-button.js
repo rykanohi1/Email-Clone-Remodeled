@@ -1,7 +1,7 @@
 import React from 'react';
 import './action-button.scss';
 
-export default ({imgSrc, label, title, action}) => {
+export default ({imgSrc, label, title, action, className}) => {
   if(!(imgSrc || label)) {
     throw new Error('imgSrc and label cannot both be blank');
   }
@@ -10,7 +10,7 @@ export default ({imgSrc, label, title, action}) => {
   }
   return (
     // In the case of most attributes, If the attribute is falsy, React will not render it
-    <button title={title} onClick={action} className='action-button'>
+    <button title={title} onClick={action} className={`action-button ${className || 'default'}`}>
       {imgSrc && <img src={imgSrc}/>}
       {label && <span>{label}</span>}
     </button>

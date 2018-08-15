@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ActionButton from '../action-button/action-button';
 
-
 export default class DropDown extends Component {
 
   constructor(props) {
@@ -25,16 +24,18 @@ export default class DropDown extends Component {
   /**
    * toggles the display
    */
-  toggleDisplay(){
+  toggleDisplay(event){
+    event.stopPropagation();
     this.setState(state => ({
       isHidden: !state.isHidden
     }));
   };
   render() {
     return (
+    
       <div className={`drop-down ${this.props.className || 'default'}`}>
-        <ActionButton imgSrc={this.props.imgSrc} action={this.toggleDisplay} label={this.props.label} title={this.props.title} />
-        <ul className={`dropdown ${this.state.isHidden ? 'hide' : 'show'}`}>
+        <ActionButton imgSrc={this.props.imgSrc} action={this.toggleDisplay} label={this.props.label} title={this.props.title}/>
+        <ul className={`drop-down ${this.state.isHidden ? 'hide' : 'show'}`}>
           {this.props.items.map(item => <li key={item.id}>
           <ActionButton title={item.value.title}
                         label={item.value.label}
@@ -43,6 +44,7 @@ export default class DropDown extends Component {
           </li>)}
         </ul>
       </div>
+     
     );
   }
 }
