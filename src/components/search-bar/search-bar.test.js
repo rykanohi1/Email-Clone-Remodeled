@@ -12,14 +12,14 @@ describe('SearchBar', () => {
 
   test('should perform search action when clicked on', () => {
     const expected = true;
-    const app = shallow(<SearchBar/>);
-    const actual = app.instance().search();
+    const app = mount(<SearchBar imgSrc='blank'/>);
+    const actual = app.instance().search('click');
     expect(actual).toEqual(expected);
   });
 
   test('updateSearch method should be called when input changes', () => {
     const expected = "test";
-    const app = mount(<SearchBar/>);
+    const app = mount(<SearchBar imgSrc='test'/>);
     app.find('.search-filter').simulate('change', {target: {value: 'test'}});
     const actual = app.state().searchTerm;
     expect(actual).toEqual(expected);

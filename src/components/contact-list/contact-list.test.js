@@ -8,8 +8,8 @@ describe('ContactList', () => {
                           {id: 2, username: "test 2", address: "blank", imgSrc: "image"},
                           {id: 3, username: "test 3", address: "blank", imgSrc: "image"}];
         const expected = 3;
-        const app = render(<ContactList contacts={contacts}/>);
-        const actual = app.find('.left-right-layout.contact').length;
+        const app = render(<ContactList className='test' contacts={contacts}/>);
+        const actual = app.find('[imgSrc= "image"]').length;
         expect(actual).toEqual(expected);
     })
 });

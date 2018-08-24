@@ -28,75 +28,52 @@ const items = {
             }
         }
     ],
+
     menuOptions: [
         {
             id: '1', value: {
-                title: 'This guy',
-                imgSrc: 'https://image.flaticon.com/icons/svg/74/74472.svg',
+                title: 'Mail',
+                imgSrc: require('images/mail.png'),
                 action: () => alert('No action yet')
             }
         },
 
         {
             id: '2', value: {
-                title: 'Options',
-                imgSrc: 'https://image.flaticon.com/icons/svg/60/60473.svg',
+                title: 'Contacts',
+                imgSrc: require('images/LogoMakr_1oMm9Q.png'),
                 action: () => alert('No action yet')
             }
         },
 
         {
             id: '3', value: {
-                title: 'Gotta have some mail in here',
-                imgSrc: 'https://image.flaticon.com/icons/svg/34/34400.svg',
+                title: 'Calendar',
+                imgSrc: require('images/calendar.png'),
                 action: () => alert('No action yet')
             }
         },
 
         {
             id: '4', value: {
-                title: 'A book',
-                imgSrc: 'https://image.flaticon.com/icons/svg/171/171322.svg',
+                title: 'Photos',
+                imgSrc: require('images/pictures.png'),
                 action: () => alert('No action yet')
             }
         },
 
         {
             id: '5', value: {
-                title: 'Calendar',
-                imgSrc: 'https://image.flaticon.com/icons/svg/34/34389.svg',
+                title: 'Shopping',
+                imgSrc: require('images/shopping.png'),
                 action: () => alert('No action yet')
             }
         },
 
         {
             id: '6', value: {
-                title: 'Photos',
-                imgSrc: 'https://image.flaticon.com/icons/svg/3/3901.svg',
-                action: () => alert('No action yet')
-            }
-        },
-
-        {
-            id: '7', value: {
-                title: 'Buy something maybe?',
-                imgSrc: 'https://image.flaticon.com/icons/svg/60/60992.svg',
-                action: () => alert('No action yet')
-            }
-        },
-
-        {
-            id: '8', value: {
-                title: 'You got stuff to do',
-                imgSrc: 'https://image.flaticon.com/icons/svg/45/45802.svg',
-                action: () => alert('No action yet')
-            }
-        },
-
-        {
-            id: '9', value: {
-                title: 'Print some stuff',
-                imgSrc: 'https://image.flaticon.com/icons/svg/12/12022.svg',
+                title: 'To Do',
+                imgSrc: require('images/checklist.png'),
                 action: () => alert('No action yet')
             }
         }

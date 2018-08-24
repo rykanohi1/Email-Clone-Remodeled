@@ -21,7 +21,7 @@ describe('DropDown', () => {
   });
   test('should toggle list when clicked on', () => {
     const expected = false;
-    const app = mount(<DropDown label="ghjjff" items={[{
+    const app = mount(<DropDown className="test" label="ghjjff" items={[{
       id: 1, value: {
         title: "test",
         label: "is a test",
@@ -34,7 +34,7 @@ describe('DropDown', () => {
         action: ()=> null
       }
     }]}/>);
-    app.find('[title="expand-options"]').simulate('click');
+    app.find('[className="drop-down test"]').simulate('click');
     const actual = app.find('ul').hasClass('dropdown hide');
     expect(actual).toEqual(expected);
   })

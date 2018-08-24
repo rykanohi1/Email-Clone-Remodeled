@@ -4,5 +4,6 @@
   justify-content: space-between;
 }
 .left-right-layout.contact {
-  display: block;
+  height: 50px;
+  display: table-cell;
 }

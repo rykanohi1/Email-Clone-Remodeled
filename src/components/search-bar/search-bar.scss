@@ -1,9 +1,24 @@
-.contact-list.show {
-  display: block;
+$light-gray: #dddddd;
+$white: #ffffff;
+$orange: #FD5F22;
+$transparent-orange: #fdc4ad;
+
+@keyframes show-contacts {
+  0% {
+    width: 15%;
+  }
+  100% {
+    width: 30%;
+  }
 }
 
-.contact-list.hide {
-  display: none;
+@keyframes focus {
+  0% {
+    background-color: $transparent-orange;
+  }
+  100% {
+    background-color: $white;
+  }
 }
 
 .toggle-mask {
@@ -19,14 +34,44 @@
 .search-bar {
   display: inline-block;
   z-index: 10;
-  margin-left: 150px;
+  width: 15%;
+  border: none;
+  position: relative;
+  height: 50%;
+  margin-left: 20px;
 
-  button {
-    height: 100%;
-    
+}
+
+.search-bar.focused {
+  animation-name: show-contacts;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  
+  .search-filter {
+      animation-name: focus;
+      animation-duration: 500ms;
+      animation-fill-mode: forwards;
+      width: 90%;
+  }
+
+  >button {
+    animation-name: focus;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    width: 10%;
+  }
+
+  >button:hover {
+    background-color: $light-gray;
   }
 }
 
+
 .search-filter {
   height: 100%;
+  width: 80%;
+  background-color: $transparent-orange;
+  border: none;
+  padding: 0px;
+  padding-left: 10px;
 }

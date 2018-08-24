@@ -1,8 +1,14 @@
-.contact-list.show {
-  display: block; }
+@keyframes show-contacts {
+  0% {
+    width: 15%; }
+  100% {
+    width: 30%; } }
 
-.contact-list.hide {
-  display: none; }
+@keyframes focus {
+  0% {
+    background-color: #fdc4ad; }
+  100% {
+    background-color: #ffffff; } }
 
 .toggle-mask {
   height: 2000px;
@@ -13,9 +19,33 @@
 .search-bar {
   display: inline-block;
   z-index: 10;
-  margin-left: 150px; }
-  .search-bar button {
-    height: 100%; }
+  width: 15%;
+  border: none;
+  position: relative;
+  height: 50%;
+  margin-left: 20px; }
+
+.search-bar.focused {
+  animation-name: show-contacts;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards; }
+  .search-bar.focused .search-filter {
+    animation-name: focus;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    width: 90%; }
+  .search-bar.focused > button {
+    animation-name: focus;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    width: 10%; }
+  .search-bar.focused > button:hover {
+    background-color: #dddddd; }
 
 .search-filter {
-  height: 100%; }
+  height: 100%;
+  width: 80%;
+  background-color: #fdc4ad;
+  border: none;
+  padding: 0px;
+  padding-left: 10px; }

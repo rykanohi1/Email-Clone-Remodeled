@@ -50,17 +50,17 @@ render() {
   return (
     <React.Fragment>
     <div className={this.state.isVisible ? "toggle-mask" : ""} onClick={this.hideDropdown}/>
-      <div className="search-bar">
+      <div className={`search-bar ${this.state.isVisible ? "focused" : "unfocused"}`}>
         <input className="search-filter" 
-               type="search" 
+               type="text" 
                placeholder="search contacts" 
                value={this.state.searchTerm} 
                onChange={this.updateSearch} 
                onFocus={this.showDropdown}/>
         <ActionButton title="searchButton"
-                      label="search"
                       imgSrc={this.props.imgSrc}
-                      action={this.search}/>
+                      action={this.search}
+                      className="search-button"/>
         {this.state.isVisible && (<ContactList contacts={this.filterContacts()} getContactEmails={this.search} className='search-bar'/>)}
         </div>
     </React.Fragment>);

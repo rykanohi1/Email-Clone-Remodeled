@@ -1,32 +1,26 @@
 import React from 'react';
-import LeftRightLayout from '../layout/left-right-layout/left-right-layout';
 import ActionButton from '../action-button/action-button';
 import './contact-list.scss';
+import Logo from 'images/LogoMakr_5IoRm3.png';
 
 export default ({className,contacts}) => {
 return (
   <div className={`contact-list ${className}`}>
     {contacts.map((contact, index) => (
-      <LeftRightLayout
-        className="contact"
-        key={index}
-        children={() => 
-          <div>
-          <ActionButton
-            className="contact-profile"
-            imgSrc={contact.imgSrc}
-            title={contact.address}
-            label={contact.username}
-            action={() => alert("history unavailable")}
-          />
+          <div className="contact" key={index}>
+          <div className="contact-profile" onClick={() => alert("history unavailable")}>
+              <img imgSrc={contact.imgSrc}/>
+              <div className="user-info">
+                  <span className="username">{contact.username}</span>
+                  <span className="user-address">{contact.address}</span>
+              </div>
+          </div>
           <ActionButton
             className="contact-viewer"
-            imgSrc="https://png.icons8.com/metro/1600/contacts.png"
+            imgSrc={Logo}
             action={() => alert("profile unavailable")}
           />
           </div>
-        }
-      />
     ))}
   </div>
 )}
