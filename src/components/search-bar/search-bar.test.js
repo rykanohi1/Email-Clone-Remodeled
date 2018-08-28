@@ -11,9 +11,10 @@ describe('SearchBar', () => {
   });
 
   test('should perform search action when clicked on', () => {
-    const expected = true;
-    const app = mount(<SearchBar imgSrc='blank'/>);
-    const actual = app.instance().search('click');
+    const expected = false;
+    const app = shallow(<SearchBar imgSrc='blank'/>);
+    app.instance().search('click');
+    const actual = app.props().isVisible;
     expect(actual).toEqual(expected);
   });
 

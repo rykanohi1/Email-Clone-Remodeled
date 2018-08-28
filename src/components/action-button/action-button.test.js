@@ -17,7 +17,7 @@ describe('ActionButton', () => {
   test('root element of component should be a button', () => {
     const expected = 'button';
     const app = shallow(<ActionButton imgSrc={'test'} action={noop}/>);
-    const actual = app.node.type;
+    const actual = app.getElement().type;
     expect(actual).toEqual(expected);
   });
 

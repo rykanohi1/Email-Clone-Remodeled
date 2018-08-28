@@ -34,7 +34,7 @@ describe('DropDown', () => {
         action: ()=> null
       }
     }]}/>);
-    app.find('[className="drop-down test"]').simulate('click');
+    app.find('.drop-down.test').simulate('click');
     const actual = app.find('ul').hasClass('dropdown hide');
     expect(actual).toEqual(expected);
   })

@@ -14,7 +14,7 @@ describe('LeftRightLayout', () => {
           className="test"
           children={testContents}
         />);
-        const actual = app.children().length;
+        const actual = app.find('.test').length;
         expect(actual).toBe(expected);
     });
 });

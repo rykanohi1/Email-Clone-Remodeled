@@ -37,8 +37,8 @@ export class App extends Component {
               <SearchBar contacts={this.props.contacts} imgSrc="https://www.clker.com/cliparts/7/C/B/Q/6/n/search-icon-hi.png" />
               <ActionButton className="home-page" label="Mail Client" action={() => (window.location.href = "https://redux.js.org/")} />
               <div className="nav-section">
-             <DropDown className="printer" imgSrc={require("images/printer-white.png")} title="blach" items={this.props.test}/>
-                {/*<DropDown className="nav-bar" imgSrc={require("images/options-white.png")}/>
+            {/* <DropDown className="printer" imgSrc={require("images/printer-white.png")} title="blach" items={this.props.test}/>
+                <DropDown className="nav-bar" imgSrc={require("images/options-white.png")}/>
                 <DropDown className="nav-bar" imgSrc={require("images/notifications.png")}/>
                 <DropDown className="nav-bar" imgSrc={require("images/help.png")}/>
                 <DropDown className="profile" imgSrc={"http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"} />*/}
