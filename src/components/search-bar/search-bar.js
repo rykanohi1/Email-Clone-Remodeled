@@ -61,7 +61,7 @@ render() {
                       imgSrc={this.props.imgSrc}
                       action={this.search}
                       className="search-button"/>
-        {this.state.isVisible && (<ContactList contacts={this.filterContacts()} getContactEmails={this.search} className='search-bar'/>)}
+        <ContactList contacts={this.filterContacts()} getContactEmails={this.search} className={`search-bar ${this.state.isVisible ? "show" : "hide"}`}/>
         </div>
     </React.Fragment>);
   }

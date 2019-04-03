@@ -1,0 +1,30 @@
+.settings {
+  height: 100%;
+  width: 20%; }
+
+.toggle-menu > img {
+  height: 100%;
+  width: 100%; }
+
+.menu.hide {
+  display: none; }
+
+.menu.show {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  left: -2px; }
+
+.hide-menu > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain; }
+
+.head {
+  display: flex;
+  height: 100%;
+  justify-content: end; }

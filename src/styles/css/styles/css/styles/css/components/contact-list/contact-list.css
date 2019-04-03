@@ -6,6 +6,15 @@
     height: 250px;
     margin-top: 5px; } }
 
+@keyframes collapse-search-contacts {
+  0% {
+    height: 250px;
+    margin-top: 5px; }
+  100% {
+    height: 0px;
+    margin-top: 0px;
+    visibility: hidden; } }
+
 .contact-list {
   display: table; }
 
@@ -29,11 +38,16 @@
   border-style: solid;
   border-color: #c4c0c0;
   box-shadow: 0px 0px 3px #c4c0c0;
-  width: 580px;
+  width: 584px;
   height: 250px; }
 
 .contact-list.search-bar .contact {
   height: 20%; }
+
+.contact-list.search-bar.hide {
+  animation-name: collapse-search-contacts;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards; }
 
 .contact {
   display: flex;

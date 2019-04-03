@@ -13,8 +13,9 @@ describe('SearchBar', () => {
   test('should perform search action when clicked on', () => {
     const expected = false;
     const app = shallow(<SearchBar imgSrc='blank'/>);
-    app.instance().search('click');
-    const actual = app.props().isVisible;
+    const event = {stopPropagation: () => {}};
+    app.instance().search(event);
+    const actual = app.state().isVisible;
     expect(actual).toEqual(expected);
   });
 

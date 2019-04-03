@@ -12,6 +12,16 @@ $transparent-orange: #fdc4ad;
   }
 }
 
+@keyframes collapse-contacts {
+  0% {
+    width: 30%;
+  }
+  100% {
+    width: 15%;
+  }
+}
+
+
 @keyframes focus {
   0% {
     background-color: $transparent-orange;
@@ -21,14 +31,13 @@ $transparent-orange: #fdc4ad;
   }
 }
 
-.toggle-mask {
-  height: 2000px;
-
-  width: 100%;
-
-  position: absolute;
-
-  top: 0;
+@keyframes unfocus {
+  0% {
+    background-color: $white;
+  }
+  100% {
+    background-color: $transparent-orange;
+  }
 }
 
 .search-bar {
@@ -63,6 +72,24 @@ $transparent-orange: #fdc4ad;
 
   >button:hover {
     background-color: $light-gray;
+  }
+}
+
+.search-bar.unfocused {
+  animation-name: collapse-contacts;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+
+  .search-filter {
+    animation-name: unfocus;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+
+  >button {
+    animation-name: unfocus;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
   }
 }
 

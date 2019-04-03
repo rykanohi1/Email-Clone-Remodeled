@@ -9,7 +9,17 @@
 
 .nav-section {
   display: flex;
+  position: absolute;
+  right: 0;
   height: 58px;
+  width: 20%;
   margin-bottom: 1px;
   background-color: #FD5F22;
   justify-content: space-evenly; }
+
+.toggle-mask {
+  height: 2000px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0; }

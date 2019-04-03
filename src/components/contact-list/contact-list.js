@@ -9,7 +9,7 @@ return (
     {contacts.map((contact, index) => (
           <div className="contact" key={index}>
           <div className="contact-profile" onClick={() => alert("history unavailable")}>
-              <img imgSrc={contact.imgSrc}/>
+              <img src={contact.imgSrc}/>
               <div className="user-info">
                   <span className="username">{contact.username}</span>
                   <span className="user-address">{contact.address}</span>

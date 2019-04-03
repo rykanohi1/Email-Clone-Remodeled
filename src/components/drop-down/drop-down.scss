@@ -37,14 +37,16 @@ $black: #000000;
   }
 }
 
-.toggle-mask {
-  height: 2000px;
-
-  width: 100%;
-
-  position: absolute;
-
-  top: 0;
+@keyframes hide-menu {
+  0% {
+    opacity: 100;
+    left: 0px;
+  }
+  100% {
+    opacity: 0;
+    left: -57px;
+    visibility: none;
+  }
 }
 
 .drop-down.appMenu {
@@ -74,11 +76,45 @@ $black: #000000;
   }
 }
 
-.drop-down.hide {
-  display: none;
+.drop-down-menu.hide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 0px;
+  border: 1px;
+  border-style: solid;
+  border-color: $light-gray;
+  box-shadow: 0px 0px 5px $light-gray;
+  background-color: $white;
+  width: 57px;
+  height: 350px;
+  animation-name: hide-menu;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+
+  li {
+
+    button {
+      height: 50px;
+      width: 57px;
+      background-color: $white;
+      padding-left: 8px;
+    }
+
+    button:hover {
+      animation: none;
+      border: 1px;
+      border-style: solid;
+      border-color: $light-gray;
+      box-shadow: 0px 0px 2px $light-gray;
+    }
+  }
 }
 
-.drop-down.show {
+.drop-down-menu.show {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

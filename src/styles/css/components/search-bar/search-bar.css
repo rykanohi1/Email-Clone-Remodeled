@@ -4,17 +4,23 @@
   100% {
     width: 30%; } }
 
+@keyframes collapse-contacts {
+  0% {
+    width: 30%; }
+  100% {
+    width: 15%; } }
+
 @keyframes focus {
   0% {
     background-color: #fdc4ad; }
   100% {
     background-color: #ffffff; } }
 
-.toggle-mask {
-  height: 2000px;
-  width: 100%;
-  position: absolute;
-  top: 0; }
+@keyframes unfocus {
+  0% {
+    background-color: #ffffff; }
+  100% {
+    background-color: #fdc4ad; } }
 
 .search-bar {
   display: inline-block;
@@ -41,6 +47,19 @@
     width: 10%; }
   .search-bar.focused > button:hover {
     background-color: #dddddd; }
+
+.search-bar.unfocused {
+  animation-name: collapse-contacts;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards; }
+  .search-bar.unfocused .search-filter {
+    animation-name: unfocus;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards; }
+  .search-bar.unfocused > button {
+    animation-name: unfocus;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards; }
 
 .search-filter {
   height: 100%;

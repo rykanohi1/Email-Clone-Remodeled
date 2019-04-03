@@ -9,6 +9,7 @@ import ActionButton from 'components/action-button/action-button';
 import ContactList from 'components/contact-list/contact-list';
 import DropDown from 'components/drop-down/drop-down';
 import SearchBar from 'components/search-bar/search-bar';
+import Settings from 'components/settings/settings';
 import 'styles/css/App.css';
 import 'styles/css/components/action-button/action-button.css';
 import 'styles/css/components/contact-list/contact-list.css';
@@ -17,6 +18,7 @@ import 'styles/css/containers/folder-list/folder/folder.css';
 import 'styles/css/containers/folder-list/folder/folder-count/folder-count.css';
 import 'styles/css/components/layout/left-right-layout/left-right-layout.css';
 import 'styles/css/components/search-bar/search-bar.css';
+import 'styles/css/components/settings/settings.css';
 
 export class App extends Component {
     constructor(props) {
@@ -37,8 +39,8 @@ export class App extends Component {
               <SearchBar contacts={this.props.contacts} imgSrc="https://www.clker.com/cliparts/7/C/B/Q/6/n/search-icon-hi.png" />
               <ActionButton className="home-page" label="Mail Client" action={() => (window.location.href = "https://redux.js.org/")} />
               <div className="nav-section">
-            {/* <DropDown className="printer" imgSrc={require("images/printer-white.png")} title="blach" items={this.props.test}/>
-                <DropDown className="nav-bar" imgSrc={require("images/options-white.png")}/>
+                <Settings imgSrc="blank"/>
+               {/* <DropDown className="nav-bar" imgSrc={require("images/options-white.png")}/>
                 <DropDown className="nav-bar" imgSrc={require("images/notifications.png")}/>
                 <DropDown className="nav-bar" imgSrc={require("images/help.png")}/>
                 <DropDown className="profile" imgSrc={"http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"} />*/}
