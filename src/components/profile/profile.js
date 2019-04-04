@@ -28,11 +28,11 @@ export default class Settings extends Component {
         return (
         <React.Fragment>
         <div className={this.state.isHidden ? "" : "toggle-mask"} onClick={this.toggleMenu}/>
-        <div className="settings">
+        <div className="profile">
             <ActionButton className="toggle-menu" imgSrc={require('images/options.png')} action={this.toggleMenu}/>
             <div className={`menu ${this.state.isHidden ? 'hide' : 'show'}`}>
                 <div className="head">
-                    <span>Settings</span>
+                    <span>Profile</span>
                     <ActionButton className="hide-menu" imgSrc={require('images/Close.png')} action={this.hideMenu}/>
                 </div>
             </div>

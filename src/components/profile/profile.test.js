@@ -1,5 +1,5 @@
 import React from 'react';
-import Settings from './settings';
+import Settings from './profile';
 import {shallow, mount} from 'enzyme';
 
 describe ('Settings', () => {

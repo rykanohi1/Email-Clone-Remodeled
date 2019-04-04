@@ -3,10 +3,13 @@ $grey: #c4c0c0;
 
 @keyframes show-search-contacts {
     0% {
+        visibility: hidden;
+        width: 0px;
         height: 0px;
         margin-top: 0px;
     }
     100% {
+        width: 576px;
         height: 250px;
         margin-top: 5px;
     }
@@ -14,10 +17,12 @@ $grey: #c4c0c0;
 
 @keyframes collapse-search-contacts {
     0% {
+        width: 576px;
         height: 250px;
         margin-top: 5px;
     }
     100% {
+        width: 0px;
         height: 0px;
         margin-top: 0px;
         visibility: hidden;
